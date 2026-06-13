@@ -42,6 +42,22 @@ standalone_html = f'''
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top" style="background-color: #0a2e24;">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold" href="index.html">🌳 RFO Analysis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="methodologie.html">Méthodologie</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/alex062024/Global-Forest-Watch" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div class="header-section mb-4">
     <div class="container">
         <div class="row align-items-center">

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodologie - Analyse RFO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; }
+        .navbar { background-color: #1B4D3E !important; }
+        .methodology-header { background: linear-gradient(135deg, #1B4D3E 0%, #2E8B57 100%); color: white; padding: 60px 0; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .section-title { color: #1B4D3E; border-left: 5px solid #2E8B57; padding-left: 15px; margin-bottom: 25px; }
+        code { background-color: #e9ecef; color: #d63384; padding: 2px 4px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">🌳 RFO Analysis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link active" href="methodologie.html">Méthodologie</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/alex062024/Global-Forest-Watch" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="methodology-header text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Documentation Méthodologique</h1>
+        <p class="lead">Processus d'analyse, sources de données et outils technologiques</p>
+    </div>
+</header>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            
+            <div class="card p-4">
+                <h2 class="section-title">1. Sources des Données</h2>
+                <p>Cette analyse s'appuie sur trois piliers de données géospatiales et environnementales reconnus mondialement :</p>
+                <ul>
+                    <li><strong>Global Forest Watch (WRI/UMD) :</strong> Utilisation du dataset <em>Tree Cover Loss</em> (Hansen et al.) pour quantifier la perte de forêt primaire annuelle de 2010 à 2020.</li>
+                    <li><strong>ESA Climate Change Initiative (CCI) :</strong> Données d'occupation du sol (Land Cover) à 300m de résolution pour établir la stratification de référence de 2015.</li>
+                    <li><strong>UNESCO World Heritage Centre :</strong> Récupération des limites officielles et du statut de conservation du site N° 718.</li>
+                </ul>
+            </div>
+
+            <div class="card p-4">
+                <h2 class="section-title">2. Extraction et Traitement Spatial</h2>
+                <p>Le tracé géographique précis de la Réserve de Faune à Okapis a été extrait via l'API <strong>Overpass (OpenStreetMap)</strong> en utilisant la relation <code>401017</code>. Le processus technique comprend :</p>
+                <ol>
+                    <li>Récupération des données XML brutes depuis les serveurs OSM.</li>
+                    <li>Conversion du format OSM XML en <code>GeoJSON</code> haute précision pour une intégration web fluide.</li>
+                    <li>Stratification visuelle par classes d'occupation du sol basée sur les statistiques de superficie calculées par l'ICCN et le GFW.</li>
+                </ol>
+            </div>
+
+            <div class="card p-4">
+                <h2 class="section-title">3. Architecture Technologique</h2>
+                <p>Le projet est conçu comme une application web <strong>standalone</strong> utilisant des technologies modernes :</p>
+                <ul>
+                    <li><strong>Leaflet.js :</strong> Moteur cartographique pour la visualisation spatiale interactive.</li>
+                    <li><strong>Chart.js :</strong> Génération de graphiques dynamiques pour les séries temporelles et les répartitions proportionnelles.</li>
+                    <li><strong>Bootstrap 5 :</strong> Framework CSS pour une interface responsive et professionnelle.</li>
+                    <li><strong>Python (Pandas/Requests) :</strong> Scripts de traitement de données utilisés pour la préparation des datasets.</li>
+                </ul>
+            </div>
+
+            <div class="card p-4 bg-light border-0">
+                <h2 class="section-title text-dark">4. Limites et Précision</h2>
+                <p class="mb-0">Les données de "perte de couvert forestier" indiquent un changement de la canopée mais ne distinguent pas toujours la déforestation anthropique des perturbations naturelles. Toutefois, dans le contexte de la RFO, la corrélation avec l'exploitation minière et l'agriculture itinérante est confirmée par les rapports de terrain de l'ICCN.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="text-center pb-5 text-muted">
+    <small>&copy; 2026 - Projet d'analyse RFO - Réalisé via Gemini CLI</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
