@@ -28,14 +28,17 @@ rfo_shape = folium.Rectangle(
     tooltip="Cliquez pour plus d'infos"
 ).add_to(m)
 
-# Ajout d'un titre principal sur la carte
+# Ajout d'un titre flottant par-dessus la carte
 title_html = '''
-             <h3 align="center" style="font-size:22px; font-family: 'Helvetica', sans-serif; color: #1B4D3E; margin-top: 10px;">
-             <b>Réserve de Faune à Okapis - Site du Patrimoine Mondial de l'UNESCO (N° 718)</b>
-             </h3>
-             <p align="center" style="font-size:14px; font-family: Arial, sans-serif; color: #555; margin-top: -10px;">
-             Données d'Occupation du Sol et Délimitation Officielle
-             </p>
+             <div style="position: fixed; 
+             top: 10px; left: 50%; transform: translateX(-50%); width: 70%;
+             z-index:9999; background-color:rgba(255, 255, 255, 0.85); 
+             padding: 10px; border-radius: 10px; border: 2px solid #1B4D3E;
+             text-align: center; font-family: 'Helvetica', sans-serif;
+             box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+             <h3 style="margin: 0; color: #1B4D3E; font-size: 20px;"><b>Réserve de Faune à Okapis - Patrimoine Mondial (N° 718)</b></h3>
+             <p style="margin: 5px 0 0 0; color: #555; font-size: 14px;">Occupation du Sol & Délimitation Officielle (2015)</p>
+             </div>
              '''
 m.get_root().html.add_child(folium.Element(title_html))
 

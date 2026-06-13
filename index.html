@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0bc3682582c6feeee491661cd8fb2d1a {
+                #map_fc6ee34705c8ea34aa4bf19949a2abf0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,12 +56,15 @@
 <body>
     
     
-             <h3 align="center" style="font-size:22px; font-family: 'Helvetica', sans-serif; color: #1B4D3E; margin-top: 10px;">
-             <b>Réserve de Faune à Okapis - Site du Patrimoine Mondial de l'UNESCO (N° 718)</b>
-             </h3>
-             <p align="center" style="font-size:14px; font-family: Arial, sans-serif; color: #555; margin-top: -10px;">
-             Données d'Occupation du Sol et Délimitation Officielle
-             </p>
+             <div style="position: fixed; 
+             top: 10px; left: 50%; transform: translateX(-50%); width: 70%;
+             z-index:9999; background-color:rgba(255, 255, 255, 0.85); 
+             padding: 10px; border-radius: 10px; border: 2px solid #1B4D3E;
+             text-align: center; font-family: 'Helvetica', sans-serif;
+             box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+             <h3 style="margin: 0; color: #1B4D3E; font-size: 20px;"><b>Réserve de Faune à Okapis - Patrimoine Mondial (N° 718)</b></h3>
+             <p style="margin: 5px 0 0 0; color: #555; font-size: 14px;">Occupation du Sol & Délimitation Officielle (2015)</p>
+             </div>
              
     
      <div style="position: fixed; 
@@ -81,14 +84,14 @@
      </div>
      
     
-            <div class="folium-map" id="map_0bc3682582c6feeee491661cd8fb2d1a" ></div>
+            <div class="folium-map" id="map_fc6ee34705c8ea34aa4bf19949a2abf0" ></div>
         
 </body>
 <script>
     
     
-            var map_0bc3682582c6feeee491661cd8fb2d1a = L.map(
-                "map_0bc3682582c6feeee491661cd8fb2d1a",
+            var map_fc6ee34705c8ea34aa4bf19949a2abf0 = L.map(
+                "map_fc6ee34705c8ea34aa4bf19949a2abf0",
                 {
                     center: [2.0, 28.5],
                     crs: L.CRS.EPSG3857,
@@ -105,7 +108,7 @@
 
         
     
-            var tile_layer_10daac658dc7fda22e6151b7da96a333 = L.tileLayer(
+            var tile_layer_a31376c7b3cc5c37aa5c0940a5f8fa9e = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -122,10 +125,10 @@
             );
         
     
-            tile_layer_10daac658dc7fda22e6151b7da96a333.addTo(map_0bc3682582c6feeee491661cd8fb2d1a);
+            tile_layer_a31376c7b3cc5c37aa5c0940a5f8fa9e.addTo(map_fc6ee34705c8ea34aa4bf19949a2abf0);
         
     
-            var tile_layer_13c4990227ae5383913f88b6188c6698 = L.tileLayer(
+            var tile_layer_424932817b3c443a4161bb196a7f1c39 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -142,33 +145,33 @@
             );
         
     
-            tile_layer_13c4990227ae5383913f88b6188c6698.addTo(map_0bc3682582c6feeee491661cd8fb2d1a);
+            tile_layer_424932817b3c443a4161bb196a7f1c39.addTo(map_fc6ee34705c8ea34aa4bf19949a2abf0);
         
     
-            var rectangle_1eac58e01aabc46e6b77afe12d09ad49 = L.rectangle(
+            var rectangle_4ee39c8014d6b829e354a9ae9531439b = L.rectangle(
                 [[1.0, 28.0333], [2.7, 29.1333]],
                 {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_0bc3682582c6feeee491661cd8fb2d1a);
+            ).addTo(map_fc6ee34705c8ea34aa4bf19949a2abf0);
         
     
-        var popup_83f17ff1e7e8e305632ed24bb568528e = L.popup({
+        var popup_08f9f5994ae78176f67efa002a0dc803 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_8c74af09d3150b5d46a1b796be8007ea = $(`<div id="html_8c74af09d3150b5d46a1b796be8007ea" style="width: 100.0%; height: 100.0%;"><b>Réserve de Faune à Okapis (RFO)</b><br>UNESCO World Heritage Site<br>Surface: ~1,372,625 Ha</div>`)[0];
-                popup_83f17ff1e7e8e305632ed24bb568528e.setContent(html_8c74af09d3150b5d46a1b796be8007ea);
+                var html_2370365f2df4780930a0463140e86ead = $(`<div id="html_2370365f2df4780930a0463140e86ead" style="width: 100.0%; height: 100.0%;"><b>Réserve de Faune à Okapis (RFO)</b><br>UNESCO World Heritage Site<br>Surface: ~1,372,625 Ha</div>`)[0];
+                popup_08f9f5994ae78176f67efa002a0dc803.setContent(html_2370365f2df4780930a0463140e86ead);
             
         
 
-        rectangle_1eac58e01aabc46e6b77afe12d09ad49.bindPopup(popup_83f17ff1e7e8e305632ed24bb568528e)
+        rectangle_4ee39c8014d6b829e354a9ae9531439b.bindPopup(popup_08f9f5994ae78176f67efa002a0dc803)
         ;
 
         
     
     
-            rectangle_1eac58e01aabc46e6b77afe12d09ad49.bindTooltip(
+            rectangle_4ee39c8014d6b829e354a9ae9531439b.bindTooltip(
                 `<div>
                      Cliquez pour plus d'infos
                  </div>`,
@@ -178,7 +181,7 @@
             );
         
     
-            var measure_control_f2645f0afca8f6fc421e5cb1251a49f6 = new L.Control.Measure(
+            var measure_control_65f9795aadc08d528b1308b22049fc6a = new L.Control.Measure(
                 {
   "position": "topleft",
   "primaryLengthUnit": "kilometers",
@@ -186,7 +189,7 @@
   "primaryAreaUnit": "sqmeters",
   "secondaryAreaUnit": "acres",
 });
-            map_0bc3682582c6feeee491661cd8fb2d1a.addControl(measure_control_f2645f0afca8f6fc421e5cb1251a49f6);
+            map_fc6ee34705c8ea34aa4bf19949a2abf0.addControl(measure_control_65f9795aadc08d528b1308b22049fc6a);
 
             // Workaround for using this plugin with Leaflet>=1.8.0
             // https://github.com/ljagis/leaflet-measure/issues/171
@@ -205,23 +208,23 @@
 
         
     
-            var layer_control_3bc248e1aca371e9790b657e1ccdf981_layers = {
+            var layer_control_50b5b4a84da450b52d24000c9484218d_layers = {
                 base_layers : {
-                    "cartodbpositron" : tile_layer_10daac658dc7fda22e6151b7da96a333,
-                    "Vue Satellite (Esri)" : tile_layer_13c4990227ae5383913f88b6188c6698,
+                    "cartodbpositron" : tile_layer_a31376c7b3cc5c37aa5c0940a5f8fa9e,
+                    "Vue Satellite (Esri)" : tile_layer_424932817b3c443a4161bb196a7f1c39,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_3bc248e1aca371e9790b657e1ccdf981 = L.control.layers(
-                layer_control_3bc248e1aca371e9790b657e1ccdf981_layers.base_layers,
-                layer_control_3bc248e1aca371e9790b657e1ccdf981_layers.overlays,
+            let layer_control_50b5b4a84da450b52d24000c9484218d = L.control.layers(
+                layer_control_50b5b4a84da450b52d24000c9484218d_layers.base_layers,
+                layer_control_50b5b4a84da450b52d24000c9484218d_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_0bc3682582c6feeee491661cd8fb2d1a);
+            ).addTo(map_fc6ee34705c8ea34aa4bf19949a2abf0);
 
         
 </script>
