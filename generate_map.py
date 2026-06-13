@@ -17,15 +17,24 @@ satellite = folium.TileLayer(
     control = True
 ).add_to(m)
 
-# Emprise de la réserve
-rfo_shape = folium.Rectangle(
-    bounds=rfo_bounds,
-    color="#FF4500",
-    weight=3,
-    fill=True,
-    fill_opacity=0.1,
-    popup="<b>Réserve de Faune à Okapis (RFO)</b><br>UNESCO World Heritage Site<br>Surface: ~1,372,625 Ha",
-    tooltip="Cliquez pour plus d'infos"
+import json
+
+# Chargement du contour réel (GeoJSON)
+with open('rfo_boundary.geojson', 'r') as f:
+    rfo_geojson = json.load(f)
+
+# Ajout du contour réel de la réserve
+folium.GeoJson(
+    rfo_geojson,
+    name="Limite Officielle (RFO)",
+    style_function=lambda x: {
+        "color": "#FF4500",
+        "weight": 3,
+        "fillColor": "#FF4500",
+        "fillOpacity": 0.1,
+    },
+    tooltip="Réserve de Faune à Okapis (RFO)",
+    popup=folium.Popup("<b>Réserve de Faune à Okapis</b><br>UNESCO Site 718<br>Surface: ~1,372,625 Ha", max_width=300)
 ).add_to(m)
 
 # Ajout d'un titre flottant par-dessus la carte
