@@ -30,17 +30,20 @@ rfo_shape = folium.Rectangle(
 
 # Ajout d'un titre principal sur la carte
 title_html = '''
-             <h3 align="center" style="font-size:20px; font-family: Arial, sans-serif; color: #2F4F4F;">
-             <b>Carte de l'Occupation du Sol - Réserve de Faune à Okapis (2015)</b>
+             <h3 align="center" style="font-size:22px; font-family: 'Helvetica', sans-serif; color: #1B4D3E; margin-top: 10px;">
+             <b>Réserve de Faune à Okapis - Site du Patrimoine Mondial de l'UNESCO (N° 718)</b>
              </h3>
+             <p align="center" style="font-size:14px; font-family: Arial, sans-serif; color: #555; margin-top: -10px;">
+             Données d'Occupation du Sol et Délimitation Officielle
+             </p>
              '''
 m.get_root().html.add_child(folium.Element(title_html))
 
-# Légende améliorée
+# Légende améliorée avec lien UNESCO
 legend_html = '''
      <div style="position: fixed; 
-     bottom: 50px; right: 50px; width: 280px; height: 260px; 
-     border:2px solid #2F4F4F; z-index:9999; font-size:14px;
+     bottom: 50px; right: 50px; width: 280px; height: 280px; 
+     border:2px solid #1B4D3E; z-index:9999; font-size:14px;
      background-color:rgba(255, 255, 255, 0.9); border-radius: 10px; padding: 15px;
      box-shadow: 2px 2px 10px rgba(0,0,0,0.2); font-family: Arial, sans-serif;">
      <b style="font-size:16px;">Légende de l'Occupation du Sol</b><br><br>
@@ -51,7 +54,7 @@ legend_html = '''
      <i style="background:#1E90FF;width:15px;height:15px;display:inline-block;border-radius:3px"></i> Eaux de surface (0.3%)<br>
      <i style="background:#808080;width:15px;height:15px;display:inline-block;border-radius:3px"></i> Inselbergs (0.1%)<br><br>
      <hr style="border:0.5px solid #ccc">
-     <small>Sources: Global Forest Watch / ESA Sentinel-2 / ICCN</small>
+     <small>Source : <a href="https://whc.unesco.org/fr/list/718/" target="_blank">UNESCO Site 718</a> / GFW</small>
      </div>
      '''
 m.get_root().html.add_child(folium.Element(legend_html))
